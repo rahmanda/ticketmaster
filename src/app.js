@@ -7,6 +7,8 @@ import DetailPage from './pages/DetailPage';
 
 import './style.css';
 
+const basename = process.env.NODE_ENV === 'development' ? '/' : '/ticketmaster';
+
 class App extends React.Component {
   constructor(props) {
     super(props);
@@ -14,7 +16,7 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router>
+      <Router basename={basename}>
         <React.Fragment>
           <Route path="/" exact component={HomePage} />
           <Route path="/search" component={SearchPage} />

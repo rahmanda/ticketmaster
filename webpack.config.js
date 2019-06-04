@@ -1,16 +1,17 @@
 const path = require('path');
+const webpack = require('webpack');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
-const mode = process.env.NODE_ENV || 'development';
+const NODE_ENV = process.env.NODE_ENV || 'development';
 
 module.exports = {
-  mode,
+  mode: NODE_ENV,
   entry: path.resolve(__dirname, './src/app.js'),
   output: {
     filename: '[name].js',
     path: path.resolve(__dirname, './docs'),
-    publicPath: mode === 'development' ? '/' : '/ticketmaster',
+    publicPath: NODE_ENV === 'development' ? '/' : '/ticketmaster',
   },
   devServer: {
     port: 3000,
@@ -48,6 +49,9 @@ module.exports = {
         css: ['main.css'],
       },
       template: './src/index.html',
-    })
+    }),
+    new webpack.DefinePlugin({
+      'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
+    }),
   ],
 };
