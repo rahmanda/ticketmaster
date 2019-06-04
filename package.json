@@ -1,0 +1,48 @@
+{
+  "name": "@rahmanda/ticketmaster",
+  "version": "0.1.0",
+  "description": "Mobile mockup for ticketmaster using real API",
+  "scripts": {
+    "dev": "webpack-dev-server",
+    "build": "NODE_ENV=production webpack",
+    "test": "jest"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/rahmanda/ticketmaster.git"
+  },
+  "keywords": [
+    "react",
+    "css",
+    "html",
+    "web",
+    "mobile-web"
+  ],
+  "author": "Rahmanda Wibowo <rahmandawibowo@gmail.com>",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/rahmanda/ticketmaster/issues"
+  },
+  "homepage": "https://github.com/rahmanda/ticketmaster#readme",
+  "devDependencies": {
+    "@babel/core": "^7.4.5",
+    "@babel/plugin-proposal-class-properties": "^7.4.4",
+    "@babel/preset-env": "^7.4.5",
+    "@babel/preset-react": "^7.0.0",
+    "@fullhuman/postcss-purgecss": "^1.2.0",
+    "autoprefixer": "^9.6.0",
+    "babel-loader": "^8.0.6",
+    "css-loader": "^2.1.1",
+    "html-loader": "^0.5.5",
+    "html-webpack-plugin": "^3.2.0",
+    "mini-css-extract-plugin": "^0.7.0",
+    "postcss-loader": "^3.0.0",
+    "react": "^16.8.6",
+    "react-dom": "^16.8.6",
+    "react-router-dom": "^5.0.0",
+    "tailwindcss": "^1.0.3",
+    "webpack": "^4.32.2",
+    "webpack-cli": "^3.3.2",
+    "webpack-dev-server": "^3.5.1"
+  }
+}

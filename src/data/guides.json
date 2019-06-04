@@ -1,0 +1,38 @@
+[
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/0c7023e1-1bdb-4cd0-a514-ab444b425f67jpg?fit=crop&auto=webp",
+    "name": "NBA",
+    "url": "https://www.ticketmaster.com/nba",
+    "description": "Find great tickets for your favorite NBA teams for must-see games."
+  },
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/ab8256dd-1e07-4e46-9c9c-ee51223ebdf2jpg?fit=crop&auto=webp",
+    "name": "NHL",
+    "url": "https://www.ticketmaster.com/nhl",
+    "description": "Get verified tickets to watch your favorite NHL team take the ice."
+  },
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/beb7db2a-9b97-4741-a25c-124223ef6f36jpg?fit=crop&auto=webp",
+    "name": "MLS",
+    "url": "https://www.ticketmaster.com/mls",
+    "description": "Get Major League Soccer tickets for your favorite team."
+  },
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/2a213f19-39f4-4b02-b9cc-17adafbce4b1jpg?fit=crop&auto=webp",
+    "name": "NFL",
+    "url": "https://www.ticketmaster.com/nfl",
+    "description": "Explore NFL ticket options from the Official Ticket Exchange of the NFL."
+  },
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/e0153233-6cd9-4d51-b697-af60ae00edd6jpg?fit=crop&auto=webp",
+    "name": "Broadway",
+    "url": "http://in.ticketmaster.com/broadway/",
+    "description": "Don't miss the hottest musicals and plays happening on Broadway."
+  },
+  {
+    "image": "https://next.ticketmaster.com/s3images/Guide/a51c3b35-7a88-4b59-8d14-d98d551a3f26jpg?fit=crop&auto=webp",
+    "name": "Ticketmaster Blog",
+    "url": "https://blog.ticketmaster.com/",
+    "description": "Spotlights entertainment news and tours, special offers and ticket deals, and more."
+  }
+]
