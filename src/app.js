@@ -1,6 +1,6 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Switch } from 'react-router-dom';
 import { LoadsContext } from 'react-loads';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
@@ -17,12 +17,12 @@ class App extends React.Component {
     return (
       <LoadsContext.Provider>
         <Router>
-          <React.Fragment>
+          <Switch>
             <Route path="/" exact component={HomePage} />
             <Route path="/search" component={SearchPage} />
             <Route path="/detail/:id" component={DetailPage} />
             <Route component={HomePage} />
-          </React.Fragment>
+          </Switch>
         </Router>
       </LoadsContext.Provider>
     );
