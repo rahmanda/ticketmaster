@@ -714,10 +714,6 @@ img {
   padding-bottom: 5rem;
 }
 
-.fixed {
-  position: fixed;
-}
-
 .absolute {
   position: absolute;
 }

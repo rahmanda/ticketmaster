@@ -116,7 +116,7 @@ class DetailPage extends React.Component {
                     </svg>
                     <div>{this.getDate(response.data.dates)}</div>
                   </div>
-                  <div className="fixed bottom-0 left-0 w-full p-4 bg-white">
+                  <div className="absolute bottom-0 left-0 w-full p-4 bg-white">
                     <a
                       className="block text-center bg-blue-600 font-bold rounded w-full text-white px-4 py-2 focus:bg-blue-700"
                       href={response.data.url}
