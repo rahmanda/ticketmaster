@@ -18,6 +18,7 @@ function Guides(props) {
             <a
               href={guide.url}
               key={guide.url}
+              target="_blank"
               className="w-40 mr-4 mb-4 flex-none">
               <img className="w-full rounded mb-3" src={guide.image}/>
               <p className="font-bold text-sm mb-2">{guide.name}</p>

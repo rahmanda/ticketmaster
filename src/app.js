@@ -1,6 +1,7 @@
 import React from 'react';
 import ReactDOM from 'react-dom';
-import { BrowserRouter as Router, Route, Link } from 'react-router-dom';
+import { HashRouter as Router, Route, Link } from 'react-router-dom';
+import { LoadsContext } from 'react-loads';
 import HomePage from './pages/HomePage';
 import SearchPage from './pages/SearchPage';
 import DetailPage from './pages/DetailPage';
@@ -16,13 +17,15 @@ class App extends React.Component {
 
   render() {
     return (
-      <Router basename={basename}>
-        <React.Fragment>
-          <Route path="/" exact component={HomePage} />
-          <Route path="/search" component={SearchPage} />
-          <Route path="/detail" component={DetailPage} />
-        </React.Fragment>
-      </Router>
+      <LoadsContext.Provider>
+        <Router basename={basename}>
+          <React.Fragment>
+            <Route path="/" exact component={HomePage} />
+            <Route path="/search" component={SearchPage} />
+            <Route path="/detail/:id" component={DetailPage} />
+          </React.Fragment>
+        </Router>
+      </LoadsContext.Provider>
     );
   }
 }
