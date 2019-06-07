@@ -21,6 +21,7 @@ class App extends React.Component {
             <Route path="/" exact component={HomePage} />
             <Route path="/search" component={SearchPage} />
             <Route path="/detail/:id" component={DetailPage} />
+            <Route component={HomePage} />
           </React.Fragment>
         </Router>
       </LoadsContext.Provider>
