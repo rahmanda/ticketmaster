@@ -46,7 +46,8 @@ class SearchBar extends React.Component {
         <div className="relative flex-1 flex items-center">
           <button
             className="flex-none absolute right-0 w-5 mr-3 text-gray-500"
-            type="button">
+            type="button"
+            onClick={this.onSubmit}>
             <svg
               className="fill-current"
               xmlns="http://www.w3.org/2000/svg"
