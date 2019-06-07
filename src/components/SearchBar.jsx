@@ -27,6 +27,7 @@ class SearchBar extends React.Component {
   onKeyDown = (e) => {
     if (e.key === 'Enter') {
       this.onSubmit(e);
+      e.target.blur();
     }
   }
 
