@@ -1,5 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
+const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -40,16 +41,14 @@ module.exports = {
     extensions: ['*', '.js', '.json', '.jsx'],
   },
   plugins: [
+    new HtmlWebPackPlugin({
+      template: './src/index.html',
+    }),
     new MiniCssExtractPlugin({
       filename: '[name].css',
       chunkFilename: '[id].css',
     }),
-    new HtmlWebPackPlugin({
-      files: {
-        css: ['main.css'],
-      },
-      template: './src/index.html',
-    }),
+    new StyleExtHtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
     }),
