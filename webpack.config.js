@@ -1,6 +1,6 @@
 const path = require('path');
 const webpack = require('webpack');
-const StyleExtHtmlWebpackPlugin = require('style-ext-html-webpack-plugin');
+const HtmlInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
 
@@ -41,14 +41,17 @@ module.exports = {
     extensions: ['*', '.js', '.json', '.jsx'],
   },
   plugins: [
+    new MiniCssExtractPlugin(),
     new HtmlWebPackPlugin({
       template: './src/index.html',
     }),
-    new MiniCssExtractPlugin({
-      filename: '[name].css',
-      chunkFilename: '[id].css',
+    new HtmlInlineCSSWebpackPlugin({
+      leaveCSSFile: false,
+      replace: {
+        removeTarget: true,
+        target: '<!-- inline_css_plugin -->',
+      },
     }),
-    new StyleExtHtmlWebpackPlugin(),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
     }),
