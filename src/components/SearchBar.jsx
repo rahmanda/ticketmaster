@@ -60,7 +60,7 @@ class SearchBar extends React.Component {
             </svg>
           </button>
           <input
-            className="rounded pr-10 pl-3 py-1 w-full bg-gray-200 focus:bg-white border border-solid border-gray-200 focus:border-gray-300"
+            className="rounded pr-10 pl-3 py-1 w-full bg-gray-200 border border-solid border-gray-200 focus:border-gray-300 focus:bg-white focus:outline-none"
             value={this.state.value}
             onChange={this.onChange}
             onKeyDown={this.onKeyDown}
