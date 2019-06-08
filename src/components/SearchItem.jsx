@@ -14,6 +14,7 @@ function SearchItem({ data }) {
       <img
         className="w-full"
         src={data.images.filter(image => image.ratio ==="16_9" && image.width === 640 )[0].url}
+        alt={data.name}
       />
       <div className="p-4 leading-tight">
         <p className="font-bold mb-2 md:h-10 overflow-hidden">{data.name}</p>

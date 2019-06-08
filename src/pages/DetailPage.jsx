@@ -67,9 +67,11 @@ class DetailPage extends React.Component {
           <button
             className="flex-none text-white"
             type="button"
+            aria-label="Go to previous page"
             onClick={this.props.history.goBack}>
 					  <svg
               className="fill-current"
+              focusable="false"
               xmlns="http://www.w3.org/2000/svg"
               width="24"
               height="24"
@@ -88,17 +90,22 @@ class DetailPage extends React.Component {
               ) }
               { isResolved && (
                 <div>
-                  <img className="mb-4" src={this.getImage(response.data.images)} />
-                  <span className="text-sm uppercase block text-gray-600 px-4 mb-1">{this.getCategory(response.data.classifications)}</span>
+                  <img className="mb-4" alt={response.data.name} src={this.getImage(response.data.images)} />
+                  <span className="text-sm uppercase block text-gray-600 px-4 mb-1">
+                    {this.getCategory(response.data.classifications)}
+                  </span>
                   <div className="mb-4">
                     <h1 className="font-bold px-4 mb-2">{response.data.name}</h1>
                     { response.data.priceRanges && (
-                      <div className="font-bold px-4 text-lg text-blue-700">{this.getPrice(response.data.priceRanges)}</div>
+                        <div className="font-bold px-4 text-lg text-blue-700">
+                          {this.getPrice(response.data.priceRanges)}
+                        </div>
                     )}
                   </div>
                   <div className="px-4 mb-2 flex items-start text-sm">
                     <svg
                       className="fill-current text-gray-500 flex-none mr-3 my-1"
+                      focusable="false"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -113,6 +120,7 @@ class DetailPage extends React.Component {
                   <div className="px-4 mb-2 flex items-center text-sm">
                     <svg
                       className="fill-current text-gray-500 flex-none mr-3"
+                      focusable="false"
                       xmlns="http://www.w3.org/2000/svg"
                       width="24"
                       height="24"
@@ -136,6 +144,7 @@ class DetailPage extends React.Component {
                   <div className="fixed max-w-md bottom-0 mx-auto w-full p-4 bg-white">
                     <a
                       className="block text-center bg-blue-600 font-bold rounded w-full text-white px-4 py-2 focus:bg-blue-700"
+                      rel="noopener"
                       href={response.data.url}
                       target="_blank">
                       Buy Ticket

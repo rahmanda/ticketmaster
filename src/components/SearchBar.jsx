@@ -34,9 +34,14 @@ class SearchBar extends React.Component {
   render() {
     return (
       <div className="bg-white p-4 flex items-center sticky top-0 shadow-b z-50">
-        <a href="/" className="flex-none mr-2" onClick={this.props.onLogoClick}>
+        <a
+          href="/"
+          aria-label="Link to homepage"
+          className="flex-none mr-2"
+          onClick={this.props.onLogoClick}>
           <svg
             className="fill-current text-blue-500"
+            focusable="false"
             width="34"
             height="34"
             viewBox="0 0 21 41"
@@ -47,10 +52,12 @@ class SearchBar extends React.Component {
         <div className="relative flex-1 flex items-center">
           <button
             className="flex-none absolute right-0 w-5 mr-3 text-gray-500"
+            aria-label="search"
             type="button"
             onClick={this.onSubmit}>
             <svg
               className="fill-current"
+              focusable="false"
               xmlns="http://www.w3.org/2000/svg"
               viewBox="0 0 16 16">
               <g fill="none" fillRule="evenodd">
@@ -65,6 +72,7 @@ class SearchBar extends React.Component {
             onChange={this.onChange}
             onKeyDown={this.onKeyDown}
             placeholder="Find your next experience"
+            aria-label="Find your next experience"
             type="text"/>
         </div>
       </div>

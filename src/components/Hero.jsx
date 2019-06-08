@@ -33,7 +33,7 @@ class Hero extends React.Component {
           <div className="flex mb-6 px-4">
             <svg
               className="fill-current flex-none w-32 text-white"
-              title="Ticketmaster Tickets"
+              aria-label="Ticketmaster"
               width="180"
               height="24"
               viewBox="0 0 180 24">
@@ -53,7 +53,7 @@ class Hero extends React.Component {
                 className="rounded px-4 py-2 text-gray-800 bg-gray-200 w-full focus:bg-white focus:outline-none"
                 placeholder="Search for events or artists"
                 type="text"
-                aria-label="search" />
+                aria-label="Search for events or artists" />
             </form>
           </div>
         </div>
