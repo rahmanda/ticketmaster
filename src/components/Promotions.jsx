@@ -10,7 +10,8 @@ function Promotions(props) {
             href={guide.url}
             key={guide.url}
             target="_blank"
-            className="rounded border border-solid border-blue-600 text-blue-600 mr-4 px-4 py-1 font-bold text-sm flex-none block">
+            rel="noopener"
+            className="rounded border border-solid border-blue-700 text-blue-700 mr-4 px-4 py-1 font-bold text-sm flex-none block">
             {guide.name}
           </a>
         ))

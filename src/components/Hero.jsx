@@ -52,7 +52,8 @@ class Hero extends React.Component {
                 onInput={this.onInput}
                 className="rounded px-4 py-2 text-gray-800 bg-gray-200 focus:bg-white w-full"
                 placeholder="Search for events or artists"
-                type="text"/>
+                type="text"
+                aria-label="search" />
             </form>
           </div>
         </div>
