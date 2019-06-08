@@ -20,11 +20,23 @@ class DetailPage extends React.Component {
   }
 
   getVenue(venues) {
-    const { name, city, state, address } = venues[0];
+    const { name, city, state, country, address, location } = venues[0];
     return (
       <React.Fragment>
-        <div>{name}</div>
-        <div>{address.line1} - {city.name}, {state.stateCode}</div>
+        { location ?
+          (<a
+             className="block text-blue-700 focus:text-blue-800"
+             href={`https://www.google.com/maps/search/?api=1&query=${location.latitude},${location.longitude}`}
+             target="_blank"
+             rel="noopener">
+            {name}
+          </a>) :
+          <div>{name}</div>
+        }
+        { state ?
+          <div>{address.line1} - {city.name}, {state.stateCode}</div> :
+          <div>{address.line1} - {city.name}, {country.name}</div>
+        }
       </React.Fragment>
     );
   }
