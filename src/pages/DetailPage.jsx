@@ -44,7 +44,7 @@ class DetailPage extends React.Component {
 
   getPrice(ranges) {
     const { currency, min, max } = ranges[0];
-    return `${min} - ${max} ${currency}`;
+    return `${currency} ${min} - ${max}`;
   }
 
   render() {
