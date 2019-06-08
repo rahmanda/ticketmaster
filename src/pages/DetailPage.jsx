@@ -30,7 +30,7 @@ class DetailPage extends React.Component {
     return (
       <React.Fragment>
         <a
-          className="block text-blue-700 focus:text-blue-800"
+          className="text-blue-700 focus:text-blue-800"
           href={`https://www.google.com/maps/search/?api=1&query=${query}`}
           target="_blank"
           rel="noopener">
