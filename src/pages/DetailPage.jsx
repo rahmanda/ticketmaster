@@ -1,4 +1,5 @@
 import React from 'react';
+import Loading from '../components/Loading';
 import { Loads } from 'react-loads';
 import api from '../api';
 
@@ -68,7 +69,11 @@ class DetailPage extends React.Component {
         <Loads load={this.getDetail(id)}>
           {({ response, error, isRejected, isPending, isResolved }) => (
             <React.Fragment>
-              { isPending && <div>Loading...</div> }
+              { isPending && (
+                  <div className="bg-white px-4 min-h-screen flex justify-center">
+                    <Loading/>
+                  </div>
+              ) }
               { isResolved && (
                 <div>
                   <img className="mb-4" src={this.getImage(response.data.images)} />

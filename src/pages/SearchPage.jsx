@@ -2,6 +2,7 @@ import React from 'react';
 import SearchBar from '../components/SearchBar';
 import SearchItem from '../components/SearchItem';
 import Footer from '../components/Footer';
+import Loading from '../components/Loading';
 import { Loads } from 'react-loads';
 import api from '../api';
 
@@ -62,7 +63,11 @@ class SearchPage extends React.Component {
                 onLogoClick={this.goHome}
                 onChange={this.onChange}
                 onSubmit={this.onSubmit(load)} />
-              { isPending && <div className="bg-gray-100 px-4 min-h-screen">Loading...</div> }
+              { isPending && (
+                  <div className="bg-gray-100 px-4 min-h-screen flex justify-center">
+                    <Loading/>
+                  </div>
+              ) }
               { isResolved && (
                 <div className="bg-gray-100 py-4 pr-4 pl-4 md:pl-0 md:flex flex-wrap">
                   {

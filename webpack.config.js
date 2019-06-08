@@ -3,6 +3,7 @@ const webpack = require('webpack');
 const HtmlInlineCSSWebpackPlugin = require("html-inline-css-webpack-plugin").default;
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const HtmlWebPackPlugin = require("html-webpack-plugin");
+const CopyPlugin = require('copy-webpack-plugin');
 
 const NODE_ENV = process.env.NODE_ENV || 'development';
 
@@ -52,6 +53,9 @@ module.exports = {
         target: '<!-- inline_css_plugin -->',
       },
     }),
+    new CopyPlugin([
+      { from: 'public' },
+    ]),
     new webpack.DefinePlugin({
       'process.env.NODE_ENV': JSON.stringify(NODE_ENV),
     }),
